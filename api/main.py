@@ -1,7 +1,11 @@
 from flask import Flask, request
 from flask_cors import CORS
+import nltk
 
 from generator import gen_reply
+
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
 
 app = Flask(__name__)
 
