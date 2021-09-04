@@ -23,12 +23,14 @@ body {
 }
 
 p {
-  font-size: 10px;
+  font-size: 11px;
+  letter-spacing: 1px;
 }
 
 @media screen and (min-width: 813px) {
   p {
     font-size: 13px;
+    letter-spacing: 2px;
   }
 }
 
@@ -45,7 +47,7 @@ p {
 }
 
 header {
-  background-color: #b0dcff;
+  background-color: #a2d5ff;
   height: 60px;
   position: relative;
 }
@@ -66,8 +68,62 @@ header ::after {
   bottom: 8px;
 }
 
+@media screen and (min-width: 813px) {
+  header {
+    height: 90px;
+  }
+  header h1 {
+    font-size: 30px;
+    padding-top: 20px;
+  }
+}
+
 main {
-  padding: 20px 0;
+  padding: 0;
+  background-color: #fffcec;
+}
+
+main .expla {
+  padding: 10px;
+  position: relative;
+}
+
+main .expla::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #a2d5ff;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 813px) {
+  main {
+    padding: 20px 0;
+  }
+  main .expla {
+    text-align: initial;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 20px 10px;
+  }
+  main .expla h2 {
+    display: block;
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .expla p {
+    display: block;
+    width: 70%;
+  }
+  main .expla p br {
+    display: none;
+  }
 }
 
 h2 {
@@ -92,42 +148,113 @@ h2 {
 .main-wrapper .button {
   display: block;
   height: 30px;
-  background-color: #636363;
-  color: white;
+  background-color: white;
+  color: #a2d5ff;
+  font-size: 11px;
+  font-weight: 520;
+  border: 1px solid #a2d5ff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .main-wrapper .button:hover {
-  opacity: 0.8;
+  background-color: #a2d5ff;
+  color: white;
+}
+
+.main-wrapper .button:hover svg {
+  fill: white;
+}
+
+.main-wrapper .button:active {
+  background-color: #65abe4;
+  border: #65abe4;
+}
+
+.main-wrapper .change {
+  margin: 5px auto;
 }
 
 .main-wrapper .copy {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 25px;
 }
 
 .main-wrapper .copy svg {
-  fill: white;
+  fill: #a2d5ff;
   width: 20px;
   height: 20px;
 }
 
 .main-wrapper .bakanisuru {
-  width: 90%;
+  width: 200px;
   height: auto;
 }
 
-.main-wrapper::after {
-  content: "";
-  width: 100%;
-  height: 1px;
-  background-color: #b0dcff;
-  overflow: hidden;
-  position: absolute;
+@media screen and (min-width: 813px) {
+  .main-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-wrapper textarea {
+    height: 100px;
+  }
+  .main-wrapper .textareas {
+    padding-top: 20px;
+    width: 65%;
+  }
+  .main-wrapper .change {
+    margin: 10px auto;
+  }
+  .main-wrapper .bakanisuru {
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+  }
+}
+
+#modal-wrapper {
+  text-align: center;
+  position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+
+#modal-wrapper #modal {
+  display: inline-block;
+  background-color: #e6ecf0;
+  margin-top: 60px;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 200px;
+  height: auto;
+  text-align: center;
+}
+
+#modal-wrapper #modal img {
+  width: 100px;
+  height: auto;
+}
+
+@media screen and (min-width: 813px) {
+  #modal-wrapper #modal {
+    width: 300px;
+    margin-top: 80px;
+  }
+  #modal-wrapper #modal img {
+    width: 180px;
+  }
 }
 
 footer {
@@ -138,6 +265,10 @@ footer {
 footer h3 {
   font-size: 15px;
   text-align: center;
+}
+
+footer .team {
+  padding-bottom: 10px;
 }
 
 footer .team .members {
@@ -156,12 +287,22 @@ footer .team .members li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 30%;
+}
+
+footer .team .members li img {
+  width: 30px;
+  height: auto;
+  margin-right: 5px;
+  border-radius: 50%;
 }
 
 footer .proken {
   background-color: white;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 footer .proken .proken-name {
@@ -171,6 +312,7 @@ footer .proken .proken-name {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0;
   padding-right: 20px;
   padding-top: 15px;
   -webkit-box-align: center;
@@ -179,8 +321,9 @@ footer .proken .proken-name {
 }
 
 footer .proken .proken-name img {
-  width: 20px;
+  width: 40px;
   height: 100%;
+  padding-right: 20px;
 }
 
 footer .proken .proken-link {
@@ -195,9 +338,6 @@ footer .proken .proken-link {
 
 footer .proken .proken-link li {
   padding-right: 15px;
-}
-
-footer .proken .proken-link li a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -209,7 +349,7 @@ footer .proken .proken-link li a p {
           align-items: center;
 }
 
-footer .proken .proken-link li a:hover {
+footer .proken .proken-link li:hover {
   opacity: 0.5;
 }
 
@@ -226,6 +366,30 @@ footer .proken .proken-link li .homepage::before {
 footer .proken .proken-link svg {
   width: 15px;
   height: 10px;
+}
+
+@media screen and (min-width: 813px) {
+  footer {
+    padding-top: 10px;
+  }
+  footer .team {
+    padding-bottom: 20px;
+  }
+  footer .proken {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .proken .proken-name {
+    padding: 0;
+    padding-left: 7%;
+  }
+  footer .proken .proken-link {
+    padding-left: 20px;
+  }
 }
 
 .svgs {

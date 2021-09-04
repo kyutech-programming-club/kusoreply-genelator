@@ -17,26 +17,35 @@
   </header>
 
   <main>
-    <div class="width">
+    <div class="width expla">
       <h2>クソリプとは・・・</h2>
-      <p>TwitterやインスタをはじめとするSNSで送られる<br>「くそなリプライ」のことである</p>
+      <p>TwitterやインスタをはじめとするSNSで送られる<br>「くそなリプライ」のことである。</p>
     </div>
 
-    <div class="main-wrapper width">
-      <p>さぁ、クソリプを送ってみよう！</p>
-      <textarea id="input">入力</textarea>
-      <input type="button" id="btnsend" class="button change" name="submit" value="変換する">
+    <p>さぁ、クソリプを送ってみよう！</p>
 
-      <textarea class="result" id="js-copy-text">結果</textarea>
-      <button class="copy button" id="js-copy">
-        <svg>
-          <use xlink:href="#copy-svg"></use>
-        </svg>
-      </button>
+    <div class="main-wrapper width">
+      <div class="textareas">
+        <textarea id="input">入力</textarea>
+        <input type="button" id="btnsend" class="button change" name="submit" value="変換する">
+
+        <textarea class="result" id="js-copy-text">結果</textarea>
+        <button class="copy button" id="js-copy">
+          <svg>
+            <use xlink:href="#copy-svg"></use>
+          </svg>
+        </button>
+      </div>
       <img src="assets/bakanisuru.png" class="bakanisuru">
     </div>
 
-    <div id="result"></div><!-- このdiv内に整形したデータを非同期で入れる -->
+    <!-- <div id="result"></div>このdiv内に整形したデータを非同期で入れる -->
+    <div id="modal-wrapper">
+      <div id="modal">
+        <p>通信中・・・</p>
+        <img src="assets/kangaeruhito.png">
+      </div>
+    </div>
 
   </main>
 
@@ -45,15 +54,15 @@
       <h3>team_俺たちの青春はこっから</h3>
       <ul class="members width">
         <li>
-          <img src="">
+          <img src="assets/watarusan.jpeg">
           <p>WATARU</p>
         </li>
         <li>
-          <img src="">
+          <img src="assets/tettasan.png">
           <p>てった</p>
         </li>
         <li>
-          <img src="">
+          <img src="assets/ailioolio.jpeg">
           <p>あーり</p>
         </li>
       </ul>

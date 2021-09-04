@@ -8,7 +8,8 @@ $(function () {
   /*------------------ ajax ------------------*/
   $('#btnsend').on('click', function () {
     var data = document.getElementById('input').value;
-    $('#result').text('通信中...');
+    // $('#result').text('通信中...');
+    $('#modal-wrapper').show();
     // Ajax通信を開始
     $.ajax({
       url: 'https://kusoreply-generator.an.r.appspot.com',
@@ -19,10 +20,12 @@ $(function () {
     })
       .done(function (data) {
         // 通信成功時の処理を記述
+        $('#modal-wrapper').hide();
         document.getElementById('js-copy-text').value = data;
       })
       .fail(function () {
         // 通信失敗時の処理を記述
+        $('#modal-wrapper').hide();
         alert('failed');
       });
   })
