@@ -11,39 +11,91 @@
 
 <body>
   <header>
-    <h1 class="width">クソリプジェネレーター</h1>
+    <h1 class="width">クソリプジェネレーター
+      <!-- <small></small> -->
+    </h1>
   </header>
 
   <main>
     <div class="width">
       <h2>クソリプとは・・・</h2>
-      <p>クソリプです</p>
-    </div>
-    <div class="main-wrapper width">
-      <textarea>入力</textarea>
-      <input type="button" id="btnsend" class="button" name="submit" value="変換する">
-      <textarea id="js-copy-text">結果</textarea>
-      <button class="copy button" id="js-copy"><svg>
-          <use xlink:href="#copy-svg"></use>
-        </svg></button>
+      <p>TwitterやインスタをはじめとするSNSで送られる<br>「くそなリプライ」のことである</p>
     </div>
 
-    <form name="fm">
-      <!-- <label>名前：<input type="text" name="name" size="15"></label> -->
+    <div class="main-wrapper width">
+      <p>さぁ、クソリプを送ってみよう！</p>
+      <textarea>入力</textarea>
+      <input type="button" id="btnsend" class="button change" name="submit" value="変換する">
+
+      <textarea class="result" id="js-copy-text">結果</textarea>
+      <button class="copy button" id="js-copy">
+        <svg>
+          <use xlink:href="#copy-svg"></use>
+        </svg>
+      </button>
+      <img src="assets/bakanisuru.png" class="bakanisuru">
+    </div>
+
+    <!-- <form name="fm">
+      <label>名前：<input type="text" name="name" size="15"></label>
       <input type="button" id="btnsend" name="submit" value="送信">
-    </form>
+    </form> -->
     <div id="result"></div><!-- このdiv内に整形したデータを非同期で入れる -->
 
   </main>
 
   <footer>
+    <div class="team">
+      <h3>team_俺たちの青春はこっから</h3>
+      <ul class="members width">
+        <li>
+          <img src="">
+          <p>syu_kwsk</p>
+        </li>
+        <li>
+          <img src="">
+          <p>てった</p>
+        </li>
+        <li>
+          <img src="">
+          <p>あーり</p>
+        </li>
+      </ul>
+    </div>
 
+    <div class="proken">
+      <h3 class="proken-name">
+        <img src="assets/proken216_logo.png">
+        九工大 プロ研
+      </h3>
+      <ul class="proken-link">
+        <li>
+          <a href="https://kyutech-programming-club.github.io/proken-official/">
+            <p class="homepage">ホームページ</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/kyutech_proken?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+            <p><svg>
+                <use xlink:href="#twitter"></use>
+              </svg>Twitter</p>
+          </a>
+        </li>
+      </ul>
+    </div>
   </footer>
 
   <svg class="svgs">
     <svg id="copy-svg" aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true">
       <path fill-rule="evenodd" d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z"></path>
     </svg>
+    <symbol id="twitter" viewBox="0 0 250 203.18">
+      <g>
+        <g>
+          <path d="M78.62,203.18C173,203.18,224.56,125,224.56,57.24q0-3.33-.15-6.63A104.24,104.24,0,0,0,250,24.05a102.11,102.11,0,0,1-29.46,8.08A51.52,51.52,0,0,0,243.1,3.76a103.15,103.15,0,0,1-32.57,12.45A51.34,51.34,0,0,0,123.12,63,145.59,145.59,0,0,1,17.4,9.39,51.33,51.33,0,0,0,33.28,77.87a50.87,50.87,0,0,1-23.23-6.42c0,.22,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.29,51.42,51.42,0,0,1-23.17.88,51.34,51.34,0,0,0,47.92,35.62,102.91,102.91,0,0,1-63.7,22A105.19,105.19,0,0,1,0,180.14a145.17,145.17,0,0,0,78.62,23"></path>
+        </g>
+      </g>
+    </symbol>
   </svg>
 
   <script type="text/javascript" src="script.js"></script>
