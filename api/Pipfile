@@ -9,6 +9,8 @@ verify_ssl = true
 flask = "*"
 flask-cors = "*"
 google-cloud-language = "*"
+nltk = "*"
+googletrans = "==4.0.0-rc1"
 
 [requires]
 python_version = "3.8"
