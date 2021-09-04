@@ -1,3 +1,4 @@
+@charset "UTF-8";
 li {
   list-style: none;
 }
@@ -13,9 +14,77 @@ a:visited {
 body {
   margin: 0;
   padding: 0;
+  text-align: center;
+  font-family: "游ゴシック";
 }
 
-h1 {
-  font-family: serif;
+p {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 813px) {
+  p {
+    font-size: 13px;
+  }
+}
+
+.width {
+  width: 90%;
+}
+
+@media screen and (min-width: 813px) {
+  .width {
+    width: 85%;
+    max-width: 900px;
+  }
+}
+
+header {
+  background-color: #b0dcff;
+}
+
+header h1 {
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+main {
+  padding-top: 20px;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+.main-wrapper {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-wrapper textarea {
+  width: 90%;
+}
+
+.main-wrapper button {
+  display: block;
+  height: 30px;
+  background-color: #636363;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main-wrapper button:hover {
+  opacity: 0.8;
+}
+
+.main-wrapper .copy svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
+}
+
+.svgs {
+  display: none;
 }
 /*# sourceMappingURL=stylesheet.css.map */
