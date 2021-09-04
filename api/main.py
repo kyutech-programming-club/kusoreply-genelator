@@ -10,15 +10,10 @@ HEADERS= {
 }
 CORS(app)
 
-@app.route("/", methods=["GET"])
-def hello():
-    """ Return a friendly HTTP greeting. """
-    return "Hello World!. Deploy from github actions\n"
-
-@app.route("/reply", methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST"])
 def reply():
     if request.method == "GET":
-        return ("Please send the text you want to generate a fucking lip\n", 200, HEADERS)
+        return ("Hello World!. Deploy from github actions\n", 200, HEADERS)
     else :
         try:
             input_text = request.json["input"]
