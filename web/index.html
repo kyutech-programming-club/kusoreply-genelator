@@ -20,13 +20,19 @@
       <p>クソリプです</p>
     </div>
     <div class="main-wrapper width">
-      <textarea></textarea>
-      <button class="change">変換する</button>
-      <textarea></textarea>
-      <button class="copy"><svg>
+      <textarea>入力</textarea>
+      <input type="button" id="btnsend" class="button" name="submit" value="変換する">
+      <textarea id="js-copy-text">結果</textarea>
+      <button class="copy button" id="js-copy"><svg>
           <use xlink:href="#copy-svg"></use>
         </svg></button>
     </div>
+
+    <form name="fm">
+      <!-- <label>名前：<input type="text" name="name" size="15"></label> -->
+      <input type="button" id="btnsend" name="submit" value="送信">
+    </form>
+    <div id="result"></div><!-- このdiv内に整形したデータを非同期で入れる -->
 
   </main>
 

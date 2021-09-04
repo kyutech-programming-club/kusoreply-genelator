@@ -65,7 +65,7 @@ h2 {
   width: 90%;
 }
 
-.main-wrapper button {
+.main-wrapper .button {
   display: block;
   height: 30px;
   background-color: #636363;
@@ -74,7 +74,7 @@ h2 {
   transition: 0.5s;
 }
 
-.main-wrapper button:hover {
+.main-wrapper .button:hover {
   opacity: 0.8;
 }
 
