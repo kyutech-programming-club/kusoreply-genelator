@@ -19,18 +19,20 @@ $(function () {
     $('#result').text('通信中...');
     // Ajax通信を開始
     $.ajax({
-      url: '',
-      type: 'GET',
+      url: 'https://kusoreply-generator.an.r.appspot.com/reply',
+      type: 'POST',
       // dataType: 'json',
+      contentType: 'application/json; charset=UTF-8',
       // フォーム要素の内容をハッシュ形式に変換
-      // data: $('form').serializeArray(),
+      data: JSON.stringify({ input: "aiueo" }),
       timeout: 5000,
     })
       .done(function (data) {
         // 通信成功時の処理を記述
         alert('success!');
-        // document.getElementById('js-copy-text').value = data;
-        console.log(data);
+        document.getElementById('js-copy-text').value = data;
+        // console.log(data);
+        // alert(data);
       })
       .fail(function () {
         // 通信失敗時の処理を記述
