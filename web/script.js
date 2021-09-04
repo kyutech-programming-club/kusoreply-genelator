@@ -4,7 +4,15 @@ $(function () {
 
   /*------------------ コピー ------------------*/
   $('#js-copy').on('click', function () {
-    $('#js-copy-text').select();
-    document.execCommand('copy');//非推奨
+    var text = document.getElementById('js-copy-text').value;
+    navigator.clipboard.writeText(text);
+    // navigator.clipboard.writeText(text).then(function () {
+    //   /* clipboard successfully set */
+    //   alert('おめでとう！成功したよ！！！');
+    // }, function () {
+    //   /* clipboard write failed */
+    //   alert('failed');
+    // });
   });
+
 });
