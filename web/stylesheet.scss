@@ -1,3 +1,6 @@
+ul{
+  padding:0;
+}
 li{
   list-style:none;
 }
@@ -27,6 +30,7 @@ $sp-size:10px;
 $size:13px;
 
 .width{
+  margin:0 auto;
   width:$sp-width;
   @media screen and ( min-width:813px ){
     width:$main-width;
@@ -36,45 +40,144 @@ $size:13px;
 
 header{
   background-color:rgb(176, 220, 255);
+  height:60px;
+  position:relative;
   h1{
     margin:0 auto;
+    padding:10px 0;
     font-size:20px;
+  }
+  ::after{
+    content:"";
+    height:1px;
+    width:100%;
+    background-color:white;
+    position:absolute;
+    left:0;
+    bottom:8px;
   }
 }
 
 main{
-  padding-top:20px;
+  padding:20px 0;
 }
 
 h2{
-  font-size:15px;
+  font-size:13px;
 }
 
 .main-wrapper{
   margin:0 auto;
   text-align: center;
+  padding-top:10px;
+  position:relative;
   textarea{
-  width:$sp-width;
-}
+    width:$sp-width;
+    max-width:$sp-width;
+    min-width: $sp-width;
+    height:70px;
+    margin:10px;
+  }
 
-.button{
-  display:block;
-  height:30px;
-  background-color:rgb(99, 99, 99);
-  color:white;
-  transition:0.5s;
-  &:hover{
-    opacity:0.8;
+    .button{
+    display:block;
+    height:30px;
+    background-color:rgb(99, 99, 99);
+    color:white;
+    transition:0.5s;
+    &:hover{
+      opacity:0.8;
+    }
+  }
+
+  .copy{
+    align-items: center;
+    svg{
+      fill:white;
+      width:20px;
+      height:20px;
+    }
+  }
+
+  .bakanisuru{
+    width:$sp-width;
+    height: auto;
+  }
+
+  &::after{
+    content:"";
+    width: 100%;
+    height: 1px;
+    background-color:rgb(176, 220, 255);
+    overflow: hidden;
+    position:absolute;
+    top:0;
+    left:0;
   }
 }
 
-.copy{
-  svg{
-    fill:white;
-    width:20px;
-    height:20px;
+footer{
+  background-color:gray;
+  padding-top:20px;
+  h3{
+    font-size:15px;
+    text-align: center;
   }
-}
+  .team{
+    .members{
+      display:flex;
+      justify-content: space-around;
+      margin:0 auto;
+      li{
+        display:flex;
+        justify-content: center;
+        width:30%;
+      }
+    }
+  }
+  .proken{
+    background-color: white;
+    font-size:$sp-size;
+    .proken-name{
+      display:flex;
+      justify-content: center;
+      padding-right: 20px;
+      padding-top:15px;
+      align-items:center;
+      img{
+        width:20px;
+        height:100%;
+      }
+    }
+    .proken-link{
+      display:flex;
+      justify-content: center;
+      margin:0;
+      li{
+        padding-right:15px;
+        a{
+          transition:0.5s;
+          p{
+            color:black;
+            align-items: center;
+          }
+          &:hover{
+            opacity:0.5;
+          }
+        }
+        .homepage{
+          display:flex;
+          &::before{
+            content:"▸";
+          }
+        }
+      }
+      svg{
+        width:15px;
+        height:10px;
+      }
+    }
+  }
 }
 
 .svgs{
