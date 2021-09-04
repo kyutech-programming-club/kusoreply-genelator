@@ -15,17 +15,17 @@ def hello():
     """ Return a friendly HTTP greeting. """
     return "Hello World!. Deploy from github actions\n"
 
-@app.route("/gen_reply", methods=["GET", "POST"])
-def gen_reply():
+@app.route("/reply", methods=["GET", "POST"])
+def reply():
     if request.method == "GET":
         return ("Please send the text you want to generate a fucking lip\n", 200, HEADERS)
     else :
         try:
-            input_text = request.form('input')
+            input_text = request.json["input"]
         except KeyError:
             return ("Input is must not be blank", 400, HEADERS)
 
-        reply = gen_reply(input_text)
+        reply = gen_reply.gen_reply(input_text)
         return (reply, 200, HEADERS)
 
 if __name__ == "__main__":
