@@ -1,8 +1,2 @@
 runtime: python39
 
-
-handlers:
-- url: /
-  http_headers:
-    Access-Control-Allow-Origin: '*'
-
