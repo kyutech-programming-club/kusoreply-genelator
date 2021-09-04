@@ -1,13 +1,13 @@
 from flask import Flask, request
 from flask_cors import CORS
+
+from generator import gen_reply
+
+app = Flask(__name__)
+
 HEADERS= {
     "Access-Control-Allow-Origin": "*",
 }
-
-from generator import gen_reply
-# If `entrypoint` is not defined in app.yaml, App Engine will look for an app
-# called `app` in `main.py`.
-app = Flask(__name__)
 CORS(app)
 
 @app.route("/", methods=["GET"])
@@ -25,7 +25,7 @@ def reply():
         except KeyError:
             return ("Input is must not be blank", 400, HEADERS)
 
-        reply = gen_reply.gen_reply(input_text)
+        reply = gen_reply(input_text)
         return (reply, 200, HEADERS)
 
 if __name__ == "__main__":
