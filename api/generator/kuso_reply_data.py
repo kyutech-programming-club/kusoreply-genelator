@@ -99,6 +99,5 @@ KUSO_REPLY = {
     ],
 }
 
-
 if __name__ == '__main__':
     data_formatter()
