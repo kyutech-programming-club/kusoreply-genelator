@@ -4,9 +4,6 @@ import nltk
 
 from generator import gen_reply
 
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
-
 app = Flask(__name__)
 
 HEADERS= {
@@ -31,4 +28,5 @@ if __name__ == "__main__":
     # Used when running locally only. When deploying to Google App
     # Engine, a webserver process such as Gunicorn will serve the app. This
     # can be configured by adding an `entrypoint` to app.yaml.
+    nltk.data.path += './nltk_data'
     app.run(host="localhost", port=8080, debug=True)
