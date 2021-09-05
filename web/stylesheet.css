@@ -152,6 +152,11 @@ h2 {
   margin: 10px;
 }
 
+.main-wrapper span {
+  font-size: 30px;
+  color: #ffec83;
+}
+
 .main-wrapper .button {
   display: block;
   height: 30px;
@@ -195,11 +200,6 @@ h2 {
   height: 15px;
 }
 
-.main-wrapper .bakanisuru {
-  width: 200px;
-  height: auto;
-}
-
 @media screen and (min-width: 813px) {
   .main-wrapper {
     display: -webkit-box;
@@ -214,22 +214,57 @@ h2 {
   }
   .main-wrapper .textareas {
     padding-top: 20px;
-    width: 65%;
     min-width: 480px;
-    position: relative;
   }
   .main-wrapper .change {
     margin: 10px auto;
   }
   .main-wrapper .copy {
     position: absolute;
-    right: -20px;
-    bottom: 20px;
+    right: 20px;
+    top: 20px;
   }
-  .main-wrapper .bakanisuru {
-    width: 300px;
-    height: 100%;
-    padding: 20px;
+}
+
+.three-people li {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.three-people li:not(:last-child):after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #ffec83;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.three-people img {
+  width: 200px;
+  height: auto;
+}
+
+.three-people h3 {
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 813px) {
+  .three-people {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: center;
+  }
+  .three-people li {
+    width: 30%;
+  }
+  .three-people li::after {
+    display: none;
   }
 }
 

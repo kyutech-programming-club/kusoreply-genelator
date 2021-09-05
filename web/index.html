@@ -29,14 +29,41 @@
         <textarea id="input" placeholder="クソリプしたいtweetを入力してください。"></textarea>
         <input type="button" id="btnsend" class="button change" name="submit" value="クソリプする">
 
-        <textarea class="result" id="js-copy-text" placeholder="クソリプ生成結果"></textarea>
-        <button class="copy button" id="js-copy">
-          <svg>
-            <use xlink:href="#copy-svg"></use>
-          </svg>
-        </button>
+        <span>⇩</span>
+
+        <ul class="three-people width">
+          <li class="result negaposi">
+            <h3>ネガポジ</h3>
+            <textarea id="js-copy-text" placeholder="クソリプ生成結果"></textarea>
+            <button class="copy button" id="js-copy">
+              <svg>
+                <use xlink:href="#copy-svg"></use>
+              </svg>
+            </button>
+            <img src="assets/bakanisuru.png">
+          </li>
+          <li class="result okoteru">
+            <h3>暴言</h3>
+            <textarea id="js-copy-text" placeholder="クソリプ生成結果"></textarea>
+            <button class="copy button" id="js-copy">
+              <svg>
+                <use xlink:href="#copy-svg"></use>
+              </svg>
+            </button>
+            <img src="assets/okoteru.png">
+          </li>
+          <li class="result yadayada">
+            <h3>否定</h3>
+            <textarea id="js-copy-text" placeholder="クソリプ生成結果"></textarea>
+            <button class="copy button" id="js-copy">
+              <svg>
+                <use xlink:href="#copy-svg"></use>
+              </svg>
+            </button>
+            <img src="assets/yadayada.png">
+          </li>
+        </ul>
       </div>
-      <img src="assets/bakanisuru.png" class="bakanisuru">
     </div>
 
     <!-- <div id="result"></div>このdiv内に整形したデータを非同期で入れる -->
