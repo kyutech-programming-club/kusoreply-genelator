@@ -29,9 +29,10 @@ def gen_reply_from_denial(sentence):
 def gen_reply(input_text):
     print("input text:", input_text)
     negaposi = calc_negaposi(input_text)
-    reply = gen_reply_from_negaposi(negaposi) + '\n'
-    reply += gen_reply_from_combination() + '\n'
-    reply += gen_reply_from_denial(input_text)
+    reply = {'negaposi':'', 'comb':'', 'deny':''}
+    reply['negaposi'] = gen_reply_from_negaposi(negaposi)
+    reply['comb'] = gen_reply_from_combination()
+    reply['deny'] = gen_reply_from_denial(input_text)
     return reply
 
 if __name__ == '__main__':
