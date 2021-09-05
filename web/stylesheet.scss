@@ -1,3 +1,6 @@
+ul{
+  padding:0;
+}
 li{
   list-style:none;
 }
@@ -10,8 +13,355 @@ a{
 body{
   margin:0;
   padding:0;
+  text-align: center;
+  font-family:"游ゴシック";
 }
 
-h1{
-  font-family: serif;
+p{
+  font-size: 11px;
+  letter-spacing: 1px;
+  @media screen and(min-width:813px){
+    font-size:13px;
+    letter-spacing: 2px;
+  }
+}
+
+$main-width:85%;
+$sp-width:90%;
+$sp-size:11px;
+$size:13px;
+$blue:rgb(162, 213, 255);
+$active-blue:rgb(101, 171, 228);
+
+.width{
+  margin:0 auto;
+  width:$sp-width;
+  @media screen and ( min-width:813px ){
+    width:$main-width;
+    max-width:900px;
+  }
+}
+
+header{
+  background-color:$blue;
+  height:60px;
+  background-image:url(assets/fukidashi1.png);
+  background-size:200px 60px;
+  position:relative;
+  h1{
+    margin:0 auto;
+    padding:10px 0;
+    font-size:22px;
+    color:rgb(255, 252, 236);
+    font-weight:bold;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 1px 2px 3px gray;
+  }
+  ::after{
+    content:"";
+    height:1px;
+    width:100%;
+    background-color:white;
+    position:absolute;
+    left:0;
+    bottom:8px;
+  }
+
+  @media screen and ( min-width:813px ){
+    height:90px;
+    background-size:300px 90px;
+    h1{
+      font-size:35px;
+      padding-top:15px;
+    }
+  }
+}
+
+main{
+  padding:0;
+  background-color: rgb(255, 252, 236);
+
+  .expla{
+    padding:10px;
+    position:relative;
+    &::after{
+    content:"";
+    width: 100%;
+    height: 1px;
+    background-color:$blue;
+    overflow: hidden;
+    position:absolute;
+    bottom:0;
+    left:0;
+    }
+  }
+
+  @media screen and ( min-width:813px ){
+    padding:20px 0;
+    .expla{
+      text-align: initial;
+      display:flex;
+      padding:0 20px 10px;
+      h2{
+        display:block;
+        width:30%;
+        display:flex;
+      }
+      p{
+        display:block;
+        width:70%;
+        br{
+          display:none;
+        }
+      }
+    }
+  }
+}
+
+h2{
+  font-size:13px;
+}
+
+.main-wrapper{
+  margin:0 auto;
+  text-align: center;
+  padding-top:10px;
+  position:relative;
+  textarea{
+    width:$sp-width;
+    max-width:$sp-width;
+    min-width: $sp-width;
+    height:70px;
+    margin:10px;
+  }
+
+  span{
+    font-size:30px;
+    color:rgb(255, 236, 131);
+  }
+
+    .button{
+    display:block;
+    height:30px;
+    background-color:white;
+    color:$blue;
+    font-size: $sp-size;
+    font-weight:520;
+    border:1px solid $blue;
+    transition:0.5s;
+    &:hover{
+      background-color: $blue;
+      color:white;
+      svg{
+        fill: white;
+      }
+    }
+    &:active{
+      background-color:$active-blue;
+      border:$active-blue;
+    }
+  }
+
+  .change{
+    margin:5px auto;
+  }
+
+  .copy{
+    align-items: center;
+    margin-left:25px;
+    svg{
+      fill:$blue;
+      width:15px;
+      height:15px;
+    }
+  }
+
+  @media screen and ( min-width:813px ){
+    display:flex;
+    justify-content: center;
+    textarea{
+      height:100px;
+    }
+    .textareas{
+      padding-top:20px;
+      min-width: 480px;
+    }
+    .change{
+      margin:10px auto;
+    }
+    .copy{
+      position:absolute;
+      right:20px;
+      top:20px;
+    }
+
+  }
+}
+
+.three-people{
+  li{
+    position:relative;
+    display:inline-block;
+    width:100%;
+    &:not(:last-child):after{
+      content:"";
+      height:1px;
+      width:100%;
+      background-color:rgb(255, 236, 131);
+      position:absolute;
+      bottom:0;
+      left:0;
+    }
+  }
+  img{
+    width:200px;
+    height: auto;
+  }
+  h3{
+    margin-bottom:5px;
+  }
+
+  @media screen and ( min-width:813px ){
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
+    li{
+      width:30%;
+      &::after{
+        display:none;
+      }
+    }
+  }
+}
+
+#modal-wrapper{
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display:none;
+  #modal{
+    display:inline-block;
+    background-color: #e6ecf0;
+    margin-top:60px;
+    padding: 20px 0 40px;
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    text-align: center;
+    img{
+      width:100px;
+      height:auto;
+    }
+  }
+
+  @media screen and ( min-width:813px ){
+    #modal{
+      width:300px;
+      margin-top:80px;
+      img{
+        width:180px;
+      }
+    }
+  }
+}
+
+footer{
+  background-color:gray;
+  padding-top:20px;
+  h3{
+    font-size:15px;
+    text-align: center;
+  }
+  .team{
+    padding-bottom:10px;
+    .members{
+      display:flex;
+      justify-content: space-around;
+      margin:0 auto;
+      li{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:30%;
+        img{
+          width:30px;
+          height:auto;
+          margin-right:5px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .proken{
+    background-color: white;
+    font-size:$sp-size;
+    .proken-name{
+      display:flex;
+      justify-content: center;
+      margin:0;
+      padding-right: 20px;
+      padding-top:15px;
+      align-items:center;
+      img{
+        width:40px;
+        height:100%;
+        padding-right: 20px;
+      }
+    }
+    .proken-link{
+      display:flex;
+      justify-content: center;
+      margin:0;
+      li{
+        padding-right:15px;
+        transition:0.5s;
+        a{
+          p{
+            color:black;
+            align-items: center;
+          }
+        }
+        &:hover{
+          opacity:0.5;
+        }
+        .homepage{
+          display:flex;
+          &::before{
+            content:"▸";
+          }
+        }
+      }
+      svg{
+        width:15px;
+        height:10px;
+      }
+    }
+  }
+
+  @media screen and ( min-width:813px ){
+    padding-top:10px;
+    .team{
+      padding-bottom:20px;
+    }
+    .proken{
+      display:flex;
+      align-items: center;
+      .proken-name{
+        padding:0;
+        padding-left:7%;
+      }
+      .proken-link{
+        padding-left:20px;
+      }
+    }
+  }
+}
+
+.svgs{
+  display:none;
 }
