@@ -1,2 +1,4 @@
 runtime: python39
 
+env_variables:
+  NLTK_DATA: "./nltk_data/"
