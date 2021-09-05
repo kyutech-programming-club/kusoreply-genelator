@@ -9,26 +9,26 @@ def deny_sentence(en_sentence):
         if token == "not":
             continue
         elif token == "please":
-            reply += "do not "
+            denied_en_sentence += "do not "
         elif i < len(tagged)-1 and tagged[i+1][0] == "not":
-            reply += token + " "
+            denied_en_sentence += token + " "
         elif i > 0 and tagged[i-1][0] in ["not", "to"]:
-            reply += token + " "
+            denied_en_sentence += token + " "
         elif tag[:2] == "VB" and token in ["is", "am","are", "was", "were", "be", "do", "did", "does", "'m"]:
-            reply += token + " not "
+            denied_en_sentence += token + " not "
         elif tag == "VBD":
-            reply += "did not " + token + " "
+            denied_en_sentence += "did not " + token + " "
         elif tag in ["VB", "VBP"] and token != "Let":
             if i > 0 and tagged[i-1][1] == 'MD':
-                reply += "not " + token + " "
+                denied_en_sentence += "not " + token + " "
             else:
-                reply += "do not " + token + " "
+                denied_en_sentence += "do not " + token + " "
         elif tag == "VBZ":
             if i > 0 and tagged[i-1][1] == 'MD':
-                reply += "not " + token + " "
+                denied_en_sentence += "not " + token + " "
             else:
-                reply += "does not " + token + " "
+                denied_en_sentence += "does not " + token + " "
         else:
-            reply += token + " "
+            denied_en_sentence += token + " "
 
     return denied_en_sentence[:-1]
