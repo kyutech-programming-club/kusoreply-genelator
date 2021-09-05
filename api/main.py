@@ -4,7 +4,7 @@ import nltk
 
 from generator import gen_reply
 
-nltk.datata.path.append("api/nltk_data")
+nltk.data.path.append("api/nltk_data")
 
 app = Flask(__name__)
 
