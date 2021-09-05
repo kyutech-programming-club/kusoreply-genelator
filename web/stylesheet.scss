@@ -45,11 +45,17 @@ $active-blue:rgb(101, 171, 228);
 header{
   background-color:$blue;
   height:60px;
+  background-image:url(assets/fukidashi1.png);
+  background-size:200px 60px;
   position:relative;
   h1{
     margin:0 auto;
     padding:10px 0;
-    font-size:20px;
+    font-size:22px;
+    color:rgb(255, 252, 236);
+    font-weight:bold;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 1px 2px 3px gray;
   }
   ::after{
     content:"";
@@ -63,9 +69,10 @@ header{
 
   @media screen and ( min-width:813px ){
     height:90px;
+    background-size:300px 90px;
     h1{
-      font-size:30px;
-      padding-top:20px;
+      font-size:35px;
+      padding-top:15px;
     }
   }
 }
@@ -159,8 +166,8 @@ h2{
     margin-left:25px;
     svg{
       fill:$blue;
-      width:20px;
-      height:20px;
+      width:15px;
+      height:15px;
     }
   }
 
@@ -178,10 +185,18 @@ h2{
     .textareas{
       padding-top:20px;
       width:65%;
+      min-width: 480px;
+      position:relative;
     }
     .change{
       margin:10px auto;
     }
+    .copy{
+      position:absolute;
+      right:-20px;
+      bottom:20px;
+    }
+
     .bakanisuru{
       width:300px;
       height:100%;
