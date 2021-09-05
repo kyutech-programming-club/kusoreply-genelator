@@ -4,8 +4,8 @@ $(function () {
     var text = document.getElementById('negaposi-reply').value;
     navigator.clipboard.writeText(text);
   });
-  $('#combi-copy').on('click', function () {
-    var text = document.getElementById('combi-reply').value;
+  $('#comb-copy').on('click', function () {
+    var text = document.getElementById('comb-reply').value;
     navigator.clipboard.writeText(text);
   });
   $('#deny-copy').on('click', function () {
@@ -29,7 +29,10 @@ $(function () {
       .done(function (data) {
         // 通信成功時の処理を記述
         $('#modal-wrapper').hide();
-        document.getElementById('js-copy-text').value = data;
+        // console.dir(data);
+        document.getElementById('negaposi-reply').value = data["negaposi"];
+        document.getElementById('comb-reply').value = data["comb"];
+        document.getElementById('deny-reply').value = data["deny"];
       })
       .fail(function () {
         // 通信失敗時の処理を記述
