@@ -49,13 +49,19 @@ p {
 header {
   background-color: #a2d5ff;
   height: 60px;
+  background-image: url(assets/fukidashi1.png);
+  background-size: 200px 60px;
   position: relative;
 }
 
 header h1 {
   margin: 0 auto;
   padding: 10px 0;
-  font-size: 20px;
+  font-size: 22px;
+  color: #fffcec;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 1px 2px 3px gray;
 }
 
 header ::after {
@@ -71,10 +77,11 @@ header ::after {
 @media screen and (min-width: 813px) {
   header {
     height: 90px;
+    background-size: 300px 90px;
   }
   header h1 {
-    font-size: 30px;
-    padding-top: 20px;
+    font-size: 35px;
+    padding-top: 15px;
   }
 }
 
@@ -184,8 +191,8 @@ h2 {
 
 .main-wrapper .copy svg {
   fill: #a2d5ff;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 
 .main-wrapper .bakanisuru {
@@ -208,9 +215,16 @@ h2 {
   .main-wrapper .textareas {
     padding-top: 20px;
     width: 65%;
+    min-width: 480px;
+    position: relative;
   }
   .main-wrapper .change {
     margin: 10px auto;
+  }
+  .main-wrapper .copy {
+    position: absolute;
+    right: -20px;
+    bottom: 20px;
   }
   .main-wrapper .bakanisuru {
     width: 300px;
