@@ -1,7 +1,15 @@
 $(function () {
   /*------------------ コピー ------------------*/
-  $('#js-copy').on('click', function () {
-    var text = document.getElementById('js-copy-text').value;
+  $('#negaposi-copy').on('click', function () {
+    var text = document.getElementById('negaposi-reply').value;
+    navigator.clipboard.writeText(text);
+  });
+  $('#combi-copy').on('click', function () {
+    var text = document.getElementById('combi-reply').value;
+    navigator.clipboard.writeText(text);
+  });
+  $('#deny-copy').on('click', function () {
+    var text = document.getElementById('deny-reply').value;
     navigator.clipboard.writeText(text);
   });
 
